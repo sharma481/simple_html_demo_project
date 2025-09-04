@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BloomShop — Stylish Responsive Shop</title>
+  <meta name="description"
+    content="A responsive, animated shop landing page with light/dark theme toggle (sun/moon), Home, About, Work, Contact sections." />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">E-Miter</a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle light and dark theme">
+          <!-- Sun / Moon icons (two layers, we animate opacity/transform) -->
+          <svg class="icon icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 1v2" />
+              <path d="M12 21v2" />
+              <path d="M4.2 4.2l1.4 1.4" />
+              <path d="M18.4 18.4l1.4 1.4" />
+              <path d="M1 12h2" />
+              <path d="M21 12h2" />
+              <path d="M4.2 19.8l1.4-1.4" />
+              <path d="M18.4 5.6l1.4-1.4" />
+            </g>
+          </svg>
+
+          <svg class="icon icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M21 12.8A8.9 8.9 0 0 1 11.2 3 7 7 0 1 0 21 12.8z" />
+          </svg>
+        </button>
+
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section container">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <h1 class="hero-title">Welcome to Shree Balaji E-Miter</h1>
+          <p class="hero-sub">Computer All works & mobile shop .</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#work">Shop Now</a>
+            <a class="btn ghost" href="#about">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="mock-card">
+            <img alt="Sample product"
+              src="data:image/jpeg;base64,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">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about container">
+      <div class="reveal">
+        <h2>About </h2>
+        <p>We are shop onwer informations and contact and tech social Accout </p>
+      </div>
+
+      <div class="about-grid reveal">
+        <!-- Owner card (left column) -->
+        <aside class="owner-card">
+          <div class="owner-avatar">
+            <!-- Placeholder image; replace with real photo -->
+            <img alt="Shop owner photo"
+              src="onwer.jpeg">
+             </div>
+
+          <div class="owner-meta">
+            <h3>Mahvier Sharma</h3>
+            <p class="muted">Founder &amp; Curator — E-Mitwer</p>
+
+            <p class="owner-bio muted">Passionate about thoughtfully designed daily goods, Mahvier sources each item for
+              quality and value. He focuses on small-batch makers and sustainable options.</p>
+
+            <div class="owner-actions">
+              <a class="btn small primary" href="Mahaveerkukrod@gmail.com">Email</a>
+              <a class="btn small ghost" href="#contact">Message</a>
+            </div>
+
+            <div class="socials" aria-label="Owner social links">
+              <a class="social social--twitter" href="https://twitter.com/your_handle" title="Twitter — open in new tab"
+                aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M22 5.9c-.6.3-1.3.5-2 .6.7-.4 1.2-1 1.5-1.8-.7.4-1.5.7-2.3.9C18.3 4.8 17.5 4.5 16.6 4.5c-1.7 0-3 1.4-3 3 0 .2 0 .4.1.6-2.5-.1-4.6-1.3-6-3.1-.2.3-.3.6-.3.9 0 1.1.5 2.1 1.3 2.7-.5 0-1-.2-1.5-.4v.1c0 1.6 1.1 3 2.6 3.3-.4.1-.8.2-1.2.2-.3 0-.6 0-.9-.1.6 1.8 2.3 3.1 4.3 3.2-1.6 1.2-3.6 1.9-5.7 1.9-.4 0-.8 0-1.2-.1 2 1.4 4.4 2.2 7 2.2 8.4 0 13-7 13-13v-.6c.9-.6 1.5-1.3 2-2.2-.8.3-1.6.5-2.4.6z" />
+                </svg>
+              </a>
+
+              <a class="social social--instagram" href="https://instagram.com/Mahaveerkukrod"
+                title="Instagram — open in new tab" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM18.4 6.6a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z" />
+                </svg>
+              </a>
+
+              <a class="social social--linkedin" href="https://www.linkedin.com/in/your_profile"
+                title="LinkedIn — open in new tab" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5 2.5 2.5 0 0 1 4.98 3.5zM3 9h4v12H3zM11 9h3.6v1.6h.1c.5-.9 1.9-1.8 3.9-1.8 4.1 0 4.8 2.7 4.8 6.2V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8-1.7 0-2 1.4-2 2.7V21h-4z" />
+                </svg>
+              </a>
+
+              <a class="social social--whatsapp" href="https://wa.me/15551234567?text=Hello%20there"
+                title="WhatsApp chat — open in new tab" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                <!-- simple WhatsApp icon (phone in a chat bubble) -->
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.52 3.48A11.87 11.87 0 0 0 3.48 20.52L3 21l.48-2.64A11.87 11.87 0 0 0 20.52 3.48zM12 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" />
+                  <path
+                    d="M15.1 14.1c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.1.2-.5.6-.6.7-.1.1-.2.1-.4 0-.4-.2-1.1-.7-1.8-1.7-.7-1-1.1-2-.9-2.3.2-.3.5-.4.7-.5.2-.1.4-.1.6 0 .2.1.6.2 1 .4.4.2 1 .5 1.6.8.6.3.9.5 1 1 .1.5 0 .9-.1 1.1-.1.2-.2.3-.4.2z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Owner details (right column) -->
+        <div class="owner-info">
+          <h3>About the Owner</h3>
+          <p>Mahvier started E-Miter to bring curated, quality items to people who appreciate thoughtful design. He
+            works directly with artisans and small brands, ensuring transparency and sustainability in sourcing.
+            BloomShop focuses on a small catalog of well-made items rather than mass selection.</p>
+
+          <div class="stats-grid" role="list">
+            <div class="stat" role="listitem">
+              <div class="stat-value">8k+</div>
+              <div class="stat-label muted">Happy customers</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat-value">10k+</div>
+              <div class="stat-label muted">Orders fulfilled</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat-value">5 yrs</div>
+              <div class="stat-label muted">In business</div>
+            </div>
+          </div>
+
+          <h4>Store Hours</h4>
+          <ul class="hours muted">
+            <li>Mon — Fri: 09:00 — 7:00</li>
+            <li>Sat: 10:00 — 8:00</li>
+            <li>Sun: Closed</li>
+          </ul>
+
+          <h4>Where we ship</h4>
+          <p class="muted">We currently ship worldwide with tracked delivery. Local pickup available in select cities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section work container">
+      <div class="section-header reveal">
+        <h2>Our Work</h2>
+        <p>Featured services & forms — click to apply, download, or book. Hover cards for details and subtle motion.</p>
+      </div>
+
+      <div class="products-grid">
+        <!-- Exam Form -->
+        <article class="product-card reveal">
+          <div class="product-media">
+            <img alt="Exam Form"
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23e8f0ff'/><text x='50%' y='45%' dominant-baseline='middle' text-anchor='middle' font-size='26' fill='%23234a77'>Exam Form</text><text x='50%' y='65%' dominant-baseline='middle' text-anchor='middle' font-size='14' fill='%234a5b78'>Apply / Download</text></svg>">
+          </div>
+          <div class="product-body">
+            <h3>Exam Form</h3>
+            <p class="muted">Register for upcoming exams — fill details, upload documents, and submit online.</p>
+            <div class="product-actions">
+              <span class="price">Free</span>
+              <div>
+                <button class="btn small">Apply</button>
+                <button class="btn small ghost">Download</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Aadhaar Card -->
+        <article class="product-card reveal">
+          <div class="product-media">
+            <img alt="Aadhaar Card"
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23fff4e6'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='26' fill='%2382642f'>Aadhaar Card</text></svg>">
+          </div>
+          <div class="product-body">
+            <h3>Aadhaar Card</h3>
+            <p class="muted">Apply for new Aadhaar or request updates. Secure OTP flow and document guidance included.
+            </p>
+            <div class="product-actions">
+              <span class="price">Free</span>
+              <div>
+                <button class="btn small">Start</button>
+                <button class="btn small ghost">Track</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PAN Card -->
+        <article class="product-card reveal">
+          <div class="product-media">
+            <img alt="PAN Card"
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23f0e8ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='26' fill='%235b2fa6'>PAN Card</text></svg>">
+          </div>
+          <div class="product-body">
+            <h3>PAN Card</h3>
+            <p class="muted">Apply for PAN, update details, and download e-PAN instantly after verification.</p>
+            <div class="product-actions">
+              <span class="price">₹99</span>
+              <div>
+                <button class="btn small">Apply</button>
+                <button class="btn small ghost">e-PAN</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Government Form -->
+        <article class="product-card reveal">
+          <div class="product-media">
+            <img alt="Government Form"
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23e6fff2'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%2330664f'>Govt Form</text></svg>">
+          </div>
+          <div class="product-body">
+            <h3>Government Form</h3>
+            <p class="muted">Access and submit common government forms (licenses, certificates, permits) with help tips.
+            </p>
+            <div class="product-actions">
+              <span class="price">Varies</span>
+              <div>
+                <button class="btn small">Open</button>
+                <button class="btn small ghost">Help</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Travel Ticket -->
+        <article class="product-card reveal">
+          <div class="product-media">
+            <img alt="Travel Ticket"
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23fff0f5'/><text x='50%' y='45%' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%2382446b'>Travel Ticket</text><text x='50%' y='65%' dominant-baseline='middle' text-anchor='middle' font-size='14' fill='%2382446b'>Book / Download</text></svg>">
+          </div>
+          <div class="product-body">
+            <h3>Travel Ticket</h3>
+            <p class="muted">Book bus, train or flight tickets — select dates, seats, and get instant e-tickets.</p>
+            <div class="product-actions">
+              <span class="price">From $9</span>
+              <div>
+                <button class="btn small primary">Book</button>
+                <button class="btn small ghost">Tickets</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <section id="contact" class="section contact container">
+      <div class="contact-grid reveal">
+        <div>
+          <h2>Contact Us</h2>
+          <p></p>
+          <ul class="contact-info">
+            <li>Email:Mahaveerkukrod@gmail.com </li>
+            <li>Phone: +91 (555) 123-4567</li>
+            <li>Location: kukrod</li>
+          </ul>
+        </div>
+
+        <form id="contactForm" class="form-card" novalidate>
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" required placeholder="Jane Doe" />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="jane@example.com" />
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="4" required placeholder="How can we help?"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send Message</button>
+            <button class="btn ghost" type="reset">Reset</button>
+          </div>
+
+          <div id="formStatus" class="form-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> E-MiterShop — Designed with care. <a href="#home">Back to top</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
